@@ -658,10 +658,12 @@ public sealed class OnlineSessionManager : MonoBehaviour
         }
 
         /*
-         * Se outro jogador saiu, o Host também recebe
-         * este callback. Só exibimos erro quando a
-         * conexão local foi encerrada.
-         */
+        * O Host também recebe callback quando
+        * outro jogador sai.
+        *
+        * Nesse caso, não queremos mandar o Host
+        * de volta para o menu.
+        */
         if (
             disconnectedClientId
             != manager.LocalClientId
@@ -680,7 +682,32 @@ public sealed class OnlineSessionManager : MonoBehaviour
                 "A conexão com a sessão foi encerrada.";
         }
 
+        /*
+        * Não consideramos mais que existe uma
+        * Session ativa localmente.
+        */
+        CurrentSession = null;
+
         SetStatus(reason);
+
+        /*
+        * Se a queda aconteceu durante VRGame,
+        * voltamos localmente ao menu.
+        *
+        * Aqui usamos o SceneManager normal porque
+        * a conexão de rede já foi perdida.
+        */
+        if (
+            SceneManager
+                .GetActiveScene()
+                .name
+            != menuSceneName
+        )
+        {
+            SceneManager.LoadScene(
+                menuSceneName
+            );
+        }
     }
 
     private async Task RunOperationAsync(
