@@ -1228,6 +1228,7 @@ GameObject:
   - component: {fileID: 378460071}
   - component: {fileID: 378460070}
   - component: {fileID: 378460073}
+  - component: {fileID: 378460074}
   m_Layer: 0
   m_Name: OnlineSystems
   m_TagString: Untagged
@@ -1304,6 +1305,7 @@ MonoBehaviour:
     NetworkTopology: 0
     UseCMBService: 0
     AutoSpawnPlayerPrefabClientSide: 1
+    NetworkMessageMetrics: 1
     NetworkProfilingMetrics: 1
     OldPrefabList: []
   RunInBackground: 1
@@ -1340,6 +1342,39 @@ MonoBehaviour:
   menuSceneName: OnlineMenu
   gameplaySceneName: VRGame
   buildVersion: semana-3-v1
+--- !u!114 &378460074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378460069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d9db9626104da59357651088226725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Multiplayer.Tools.NetworkSimulator.Runtime::Unity.Multiplayer.Tools.NetworkSimulator.Runtime.NetworkSimulator
+  m_PresetAsset: {fileID: 0}
+  m_PresetReference:
+    rid: 2919032137055994147
+  m_Scenario:
+    rid: -2
+  m_IsScenarioSettingsFolded: 0
+  AutoRunScenario: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2919032137055994147
+      type: {class: NetworkSimulatorPreset, ns: Unity.Multiplayer.Tools.NetworkSimulator.Runtime, asm: Unity.Multiplayer.Tools.NetworkSimulator.Runtime}
+      data:
+        <Name>k__BackingField: 
+        <Description>k__BackingField: 
+        <PacketDelayMs>k__BackingField: 0
+        <PacketJitterMs>k__BackingField: 0
+        <PacketLossInterval>k__BackingField: 0
+        <PacketLossPercent>k__BackingField: 0
 --- !u!1 &379728436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,7 +4755,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 489461441}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9494142
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
