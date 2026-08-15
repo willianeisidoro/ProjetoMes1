@@ -37,7 +37,7 @@ Este projeto foi desenvolvido como um exercício prático sobre **Multiplayer em
 Uma versão do projeto pode ser baixada através do link abaixo:
 
 <p align="center">
-  <a href="https://drive.google.com/file/d/1RAPRS03ksi0gmhn2ej8hswMFDLTYf3JB/view?usp=drive_link">
+  <a href="https://drive.google.com/file/d/1AiXXUlAaCX0_S7M8bCIhAsaZfpFQYClq/view?usp=sharing">
     <strong>📥 Baixar o Build</strong>
   </a>
 </p>
